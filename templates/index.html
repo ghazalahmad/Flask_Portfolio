@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - موقعي الشخصي</title>
+    <title>Ghazal Ahmad - Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
@@ -12,32 +12,35 @@
 
     <!-- شريط التنقل -->
     <header>
+        <div class="logo">My Portfolio</div>
         <nav>
             <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#about">نبذة عني</a></li>
-                <li><a href="#skills">المهارات</a></li>
-                <li><a href="#projects">المشاريع</a></li>
-                <li><a href="#contact">التواصل</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 1. قسم الترحيب -->
-    <section id="home">
-        <h1>مرحبًا بك في موقع Portfolio!</h1>
-        <p>هذا موقعي الشخصي، سيتم تطويره قريبًا.</p>
+    <!-- قسم الترحيب -->
+    <section id="home" class="hero-section">
+        <h1>Ghazal Ahmad</h1>
+        <h2>Informatics Engineering Student | AI & NLP</h2>
     </section>
 
-    <!-- 2. قسم نبذة عني -->
+    <!-- قسم النبذة -->
     <section id="about">
-        <h2>نبذة عني</h2>
-        <p>اسمي غزل أحمد، مطور Python مهتم بتطوير الويب والذكاء الاصطناعي. أعمل على بناء تطبيقات ويب باستخدام Flask.</p>
+        <h2>About Me</h2>
+        <p>I am an Informatics Engineering student at Latakia University, specializing in Artificial Intelligence and
+            Natural Language Processing. I am passionate about web development and building applications using Python
+            and Flask.</p>
     </section>
 
-    <!-- 3. قسم المهارات -->
+    <!-- قسم المهارات -->
     <section id="skills">
-        <h2>المهارات التقنية</h2>
+        <h2>Technical Skills</h2>
         <ul>
             <li>Python</li>
             <li>Flask</li>
@@ -45,28 +48,29 @@
             <li>CSS</li>
             <li>Git & GitHub</li>
             <li>SQL</li>
+            <li>NLP</li>
         </ul>
     </section>
 
-    <!-- 4. قسم المشاريع (الـ 20 مشروع) -->
+    <!-- قسم المشاريع -->
     <section id="projects">
-        <h2>مشاريعي</h2>
+        <h2>My Projects</h2>
 
         {% for project in projects %}
         <div class="project-card">
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
-            <p><strong>التقنيات:</strong> {{ project.tech_stack }}</p>
-            <a href="{{ project.github_url }}" target="_blank">رابط GitHub</a>
+            <p><strong>Tech:</strong> {{ project.tech_stack }}</p>
+            <a href="{{ project.github_url }}" target="_blank" class="btn-github">GitHub Link</a>
         </div>
         {% endfor %}
 
     </section>
 
-    <!-- 5. قسم التواصل -->
+    <!-- قسم التواصل -->
     <section id="contact">
-        <h2>تواصل معي</h2>
-        <p>البريد الإلكتروني: <a href="mailto:ghazal009ui@gmail.com">ghazal009ui@gmail.com</a></p>
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:ghazal009ui@gmail.com">ghazal009ui@gmail.com</a></p>
         <p>
             <a href="https://github.com/ghazalahmad" target="_blank">GitHub</a>
         </p>
@@ -74,7 +78,7 @@
 
     <!-- التذييل -->
     <footer>
-        <p>&copy; 2026 غزل أحمد. جميع الحقوق محفوظة.</p>
+        <p>&copy; 2026 Ghazal Ahmad. All rights reserved.</p>
     </footer>
 
 </body>
