@@ -7,34 +7,6 @@
     <title>Portfolio - موقعي الشخصي</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<!-- قسم المشاريع -->
-<section id="projects">
-    <h2>مشاريعي</h2>
-
-    {% for project in projects %}
-    <div class="project-card">
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.description }}</p>
-        <p><strong>التقنيات:</strong> {{ project.tech_stack }}</p>
-        <a href="{{ project.github_url }}" target="_blank">رابط GitHub</a>
-    </div>
-    {% endfor %}
-
-</section>
-<!-- قسم التواصل -->
-<section id="contact">
-    <h2>تواصل معي</h2>
-    <p>البريد الإلكتروني: <a href="mailto:ghazal009ui@gmail.com">ghazal009ui@gmail.com</a></p>
-    <p>
-        <a href="https://github.com/ghazalahmad" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
-    </p>
-</section>
-
-<!-- التذييل -->
-<footer>
-    <p>&copy; 2026 غزل أحمد. جميع الحقوق محفوظة.</p>
-</footer>
 
 <body>
 
@@ -51,20 +23,19 @@
         </nav>
     </header>
 
-    <!-- قسم الترحيب -->
+    <!-- 1. قسم الترحيب -->
     <section id="home">
         <h1>مرحبًا بك في موقع Portfolio!</h1>
         <p>هذا موقعي الشخصي، سيتم تطويره قريبًا.</p>
     </section>
 
-    <!-- قسم نبذة عني -->
+    <!-- 2. قسم نبذة عني -->
     <section id="about">
         <h2>نبذة عني</h2>
-        <p>اسمي [غزل احمد]، مطور Python مهتم بتطوير الويب والذكاء الاصطناعي. أعمل على بناء تطبيقات ويب باستخدام
-            Flask.</p>
+        <p>اسمي غزل أحمد، مطور Python مهتم بتطوير الويب والذكاء الاصطناعي. أعمل على بناء تطبيقات ويب باستخدام Flask.</p>
     </section>
 
-    <!-- قسم المهارات -->
+    <!-- 3. قسم المهارات -->
     <section id="skills">
         <h2>المهارات التقنية</h2>
         <ul>
@@ -76,6 +47,35 @@
             <li>SQL</li>
         </ul>
     </section>
+
+    <!-- 4. قسم المشاريع (الـ 20 مشروع) -->
+    <section id="projects">
+        <h2>مشاريعي</h2>
+
+        {% for project in projects %}
+        <div class="project-card">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <p><strong>التقنيات:</strong> {{ project.tech_stack }}</p>
+            <a href="{{ project.github_url }}" target="_blank">رابط GitHub</a>
+        </div>
+        {% endfor %}
+
+    </section>
+
+    <!-- 5. قسم التواصل -->
+    <section id="contact">
+        <h2>تواصل معي</h2>
+        <p>البريد الإلكتروني: <a href="mailto:ghazal009ui@gmail.com">ghazal009ui@gmail.com</a></p>
+        <p>
+            <a href="https://github.com/ghazalahmad" target="_blank">GitHub</a>
+        </p>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>&copy; 2026 غزل أحمد. جميع الحقوق محفوظة.</p>
+    </footer>
 
 </body>
 
