@@ -104,14 +104,9 @@ projects = [
         'title': 'تطبيق طقس (1)',
         'description': 'تطبيق يعرض حالة الطقس في مدن مختلفة باستخدام API.',
         'tech_stack': 'Python',
-        'github_url': 'https://github.com/ghazalahmad/Python-Weather--Info-App'
+        'github_url': 'https://github.com/ghazalahmad/-Weather-Info-App'
     },
-    {
-        'title': 'تطبيق طقس (2)',
-        'description': 'نسخة أخرى من تطبيق الطقس لجلب بيانات حالة الجو.',
-        'tech_stack': 'Python',
-        'github_url': 'https://github.com/ghazalahmad/Python-Weather-Info-App'
-    },
+    
     {
         'title': 'لعبة تخمين الرقم',
         'description': 'لعبة تفاعلية حيث يحاول المستخدم تخمين رقم عشوائي بين 1 و100.',
